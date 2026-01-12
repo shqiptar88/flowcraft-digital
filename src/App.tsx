@@ -4,8 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // bestehende Seiten
 import Home from "./components/Home";
 
-// Beispiel-Referenz
-import BleachingMuenchenPage from "./app/beispiele/bleaching-muenchen/page";
+// Beispiel-Seiten
+import BleachingLandingpageMuenchen from "./pages/beispiele/bleachinglandingpage-muenchen";
 
 export default function App() {
   return (
@@ -15,7 +15,10 @@ export default function App() {
         <Route path="/" element={<Home />} />
 
         {/* Beispiele / Referenzen */}
-        <Route path="/beispiele/bleaching-muenchen" element={<BleachingMuenchenPage />} />
+        <Route
+          path="/beispiele/bleachinglandingpage-muenchen"
+          element={<BleachingLandingpageMuenchen />}
+        />
 
         {/* Fallback */}
         <Route
