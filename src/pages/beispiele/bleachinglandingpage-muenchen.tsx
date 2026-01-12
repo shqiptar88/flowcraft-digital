@@ -1,5 +1,3 @@
-// src/pages/beispiele/bleachinglandingpage-muenchen.tsx
-
 import SEOHead from "../../components/SEOHead";
 
 export default function BleachingLandingpageMuenchen() {
@@ -15,8 +13,8 @@ export default function BleachingLandingpageMuenchen() {
         <h1 className="text-3xl font-semibold">Bleaching-Landingpage München</h1>
 
         <p className="mt-4 max-w-2xl text-muted-foreground">
-          Dies ist eine <strong>Demo-Referenzseite</strong> von FlowCraft. Sie zeigt Aufbau,
-          Inhalte und Conversion-Logik einer lokalen Bleaching-Landingpage für Zahnarztpraxen.
+          Dies ist eine <strong>Demo-Referenzseite</strong> von FlowCraft. Sie zeigt Aufbau, Inhalte und
+          Conversion-Logik einer lokalen Bleaching-Landingpage für Zahnarztpraxen.
         </p>
 
         <div className="mt-8 rounded-lg border bg-card p-6 text-sm text-muted-foreground">

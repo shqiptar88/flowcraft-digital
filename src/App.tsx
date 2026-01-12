@@ -1,10 +1,9 @@
-// src/App.tsx
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // bestehende Seiten
 import Home from "./components/Home";
 
-// Beispiel-Seiten
+// Beispiele / Referenzen (DEMO)
 import BleachingLandingpageMuenchen from "./pages/beispiele/bleachinglandingpage-muenchen";
 
 export default function App() {
@@ -20,6 +19,12 @@ export default function App() {
           element={<BleachingLandingpageMuenchen />}
         />
 
+        {/* Optional: alter Link / Alias, falls du irgendwo "bleaching-muenchen" verlinkt hast */}
+        <Route
+          path="/beispiele/bleaching-muenchen"
+          element={<Navigate to="/beispiele/bleachinglandingpage-muenchen" replace />}
+        />
+
         {/* Fallback */}
         <Route
           path="*"
@@ -27,11 +32,8 @@ export default function App() {
             <main className="mx-auto max-w-4xl px-6 py-24">
               <h1 className="text-2xl font-semibold">Seite nicht gefunden</h1>
               <p className="mt-2 text-muted-foreground">
-                Die Route existiert nicht (oder wurde nicht in App.tsx verdrahtet).
+                Die Route existiert nicht.
               </p>
-              <a className="mt-6 inline-block underline" href="/">
-                Zur Startseite
-              </a>
             </main>
           }
         />
