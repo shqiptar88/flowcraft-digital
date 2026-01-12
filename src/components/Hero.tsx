@@ -2,11 +2,15 @@
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden
-      bg-[radial-gradient(900px_420px_at_10%_0%,rgba(20,184,166,0.18),transparent_62%),
-          radial-gradient(900px_420px_at_90%_10%,rgba(45,212,191,0.12),transparent_60%)]
-    ">
-      <div className="mx-auto max-w-6xl px-6 pt-16 pb-10 md:pt-20">
+    <section className="relative overflow-hidden">
+      {/* Background layer (sichtbar, aber nicht klickbar) */}
+      <div
+        className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(900px_400px_at_10%_0%,rgba(20,184,166,0.14),transparent_60%),radial-gradient(900px_400px_at_90%_10%,rgba(59,130,246,0.10),transparent_60%)]"
+        aria-hidden="true"
+      />
+
+      {/* Content layer */}
+      <div className="relative z-10 mx-auto max-w-6xl px-6 pt-16 pb-10 md:pt-20">
         {/* Eyebrow */}
         <div className="mb-6 flex flex-wrap items-center gap-3">
           <span className="text-xs tracking-widest uppercase text-slate-500">
@@ -21,8 +25,8 @@ export default function Hero() {
 
         {/* Subheadline */}
         <p className="mt-6 max-w-2xl text-base leading-relaxed text-slate-600 md:text-lg">
-          Premium-Design für Vertrauen – kombiniert mit klarer Struktur, schneller Performance
-          und SEO-Basis. Damit Menschen euch finden, verstehen – und Termine anfragen.
+          Premium-Design für Vertrauen – kombiniert mit klarer Struktur, schneller Performance und SEO-Basis.
+          Damit Menschen euch finden, verstehen – und Termine anfragen.
         </p>
 
         {/* Bullets */}
