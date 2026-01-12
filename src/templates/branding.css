@@ -1,0 +1,75 @@
+/* src/templates/branding.css */
+
+/* =========
+   Base tokens (Defaults)
+   ========= */
+:root {
+  /* Colors */
+  --bg: #ffffff;
+  --fg: #0f172a;
+  --muted: #475569;
+
+  --primary: #0d9488;      /* teal */
+  --primary-foreground: #ffffff;
+
+  --card: rgba(255, 255, 255, 0.7);
+  --border: rgba(15, 23, 42, 0.12);
+
+  /* UI */
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+
+  /* Typography (default stack) */
+  --font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+}
+
+[data-theme="dental"] {
+  --primary: #0d9488; /* teal */
+}
+
+[data-theme="coach"] {
+  --primary: #2563eb; /* blue */
+}
+
+[data-theme="trade"] {
+  --primary: #f59e0b; /* amber */
+}
+
+[data-theme="lux"] {
+  --primary: #111827; /* near-black */
+  --bg: #0b0f19;
+  --fg: #f8fafc;
+  --muted: rgba(248, 250, 252, 0.7);
+  --card: rgba(17, 24, 39, 0.5);
+  --border: rgba(248, 250, 252, 0.16);
+}
+
+/* =========
+   Font layer (falls back if fonts are not actually loaded yet)
+   ========= */
+
+/* Wenn du Satoshi NICHT lädst, fällt es sauber auf system-ui zurück */
+[data-font="satoshi"] {
+  --font-family: "Satoshi", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+[data-font="space"] {
+  --font-family: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+[data-font="proxima"] {
+  --font-family: "Proxima Nova", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+[data-font="generalSans"] {
+  --font-family: "General Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* =========
+   Apply tokens globally (works even if your components are Tailwind-heavy)
+   ========= */
+html, body {
+  font-family: var(--font-family);
+  background: var(--bg);
+  color: var(--fg);
+}

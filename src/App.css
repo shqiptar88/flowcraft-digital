@@ -1,0 +1,243 @@
+/* =========================================================
+   FlowCraft – Hybrid High-End App Styles
+   FINAL / CLEAN / STABLE
+   ========================================================= */
+
+/* ===== App Tokens ===== */
+.app {
+  --maxw: 1100px;
+  --padx: 20px;
+
+  --surface: #ffffff;
+  --surface2: #f7f7f7;
+  --text: #121212;
+  --muted: rgba(18, 18, 18, 0.7);
+  --border: rgba(18, 18, 18, 0.12);
+
+  --accent: #1a8f7a;
+  --radius: 18px;
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Base ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--surface);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* ===== Layout helpers ===== */
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--padx);
+}
+
+.section {
+  padding: 72px 0;
+}
+
+.section__header {
+  margin-bottom: 24px;
+}
+
+.section__title {
+  margin: 0 0 8px;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.section__lead {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   PROOF – Premium Trust Section
+   ========================================================= */
+
+.proof__grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px) {
+  .proof__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .proof__testimonial {
+    grid-column: 1 / -1;
+  }
+}
+
+.proof__card {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.proof__stats {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 650px) {
+  .proof__stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+.proof__statValue {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.proof__statLabel {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.proof__testimonial {
+  padding: 22px;
+}
+
+.proof__quote {
+  margin: 0 0 12px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.proof__who {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.proof__name {
+  font-weight: 700;
+}
+
+.proof__role {
+  color: var(--muted);
+}
+
+/* =========================================================
+   FAQ – High-End TwoColumn + Mobile Accordion
+   ========================================================= */
+
+.section.faq {
+  padding: 72px 0;
+}
+
+.faq__head {
+  margin-bottom: 20px;
+}
+
+.faq__title {
+  margin: 0;
+  font-size: 28px;
+}
+
+.faq__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+@media (max-width: 860px) {
+  .faq__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq__item {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface2);
+  overflow: hidden;
+}
+
+.faq__q {
+  width: 100%;
+  background: none;
+  border: 0;
+  padding: 14px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq__icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.faq__a {
+  padding: 0 16px 16px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* =========================================================
+   CTA – Clean & Conversion-focused
+   ========================================================= */
+
+.cta {
+  background: linear-gradient(
+    135deg,
+    rgba(26, 143, 122, 0.08),
+    rgba(26, 143, 122, 0.04)
+  );
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 48px 24px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.cta__title {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.cta__text {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.cta__button {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 14px 26px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+}
