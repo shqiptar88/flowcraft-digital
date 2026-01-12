@@ -2,21 +2,23 @@
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden
+      bg-[radial-gradient(900px_420px_at_10%_0%,rgba(20,184,166,0.18),transparent_62%),
+          radial-gradient(900px_420px_at_90%_10%,rgba(45,212,191,0.12),transparent_60%)]
+    ">
       <div className="mx-auto max-w-6xl px-6 pt-16 pb-10 md:pt-20">
         {/* Eyebrow */}
         <div className="mb-6 flex flex-wrap items-center gap-3">
           <span className="text-xs tracking-widest uppercase text-slate-500">
             Websites für Praxen · Schwerpunkt Zahnärzte
           </span>
-
-          
         </div>
 
         {/* Headline */}
         <h1 className="max-w-3xl text-4xl font-semibold leading-[1.05] tracking-tight text-slate-900 md:text-6xl">
-  Eine Praxiswebsite, die überzeugt und Anfragen auslöst.
-</h1>
+          Eine Praxiswebsite, die überzeugt und Anfragen auslöst.
+        </h1>
+
         {/* Subheadline */}
         <p className="mt-6 max-w-2xl text-base leading-relaxed text-slate-600 md:text-lg">
           Premium-Design für Vertrauen – kombiniert mit klarer Struktur, schneller Performance
@@ -55,12 +57,7 @@ export default function Hero() {
             So läuft’s ab
           </a>
         </div>
-
-        {/* Hinweiszeile UNTER den Buttons -> entfernt (wie gewünscht) */}
       </div>
-
-      {/* Dezenter Hintergrundverlauf (wenn du ihn magst) */}
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(900px_400px_at_10%_0%,rgba(20,184,166,.10),transparent_60%),radial-gradient(900px_400px_at_90%_10%,rgba(59,130,246,.08),transparent_60%)]" />
     </section>
   );
 }
