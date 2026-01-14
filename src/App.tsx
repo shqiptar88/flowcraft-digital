@@ -1,4 +1,3 @@
-// src/App.tsx
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -12,6 +11,7 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+
         <Route
           path="/beispiele/bleachinglandingpage-muenchen"
           element={<BleachingLandingpageMuenchen />}
