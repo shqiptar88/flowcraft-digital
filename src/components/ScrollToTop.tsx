@@ -2,22 +2,23 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 export default function ScrollToTop() {
-  const { pathname, search, hash } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    // Falls ein Hash in der URL ist (#kontakt usw.), entferne ihn,
-    // damit der Browser nicht automatisch zu einem Anchor springt.
+    // Wenn ein Hash vorhanden ist (z.B. #kontakt), dann dorthin scrollen.
+    // Wenn du NIE Hash nutzen willst, kannst du den Block entfernen.
     if (hash) {
-      window.history.replaceState(null, "", pathname + search);
+      const id = hash.replace("#", "");
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "auto", block: "start" });
+        return;
+      }
     }
 
-    // Hart nach oben
-    window.scrollTo(0, 0);
-
-    // Nachsetzen, falls ein Element später Fokus bekommt/scrollt
-    requestAnimationFrame(() => window.scrollTo(0, 0));
-    setTimeout(() => window.scrollTo(0, 0), 50);
-  }, [pathname, search, hash]);
+    // Standard: immer nach ganz oben
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [pathname, hash]);
 
   return null;
 }
