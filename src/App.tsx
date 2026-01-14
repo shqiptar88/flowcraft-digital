@@ -1,35 +1,25 @@
-// src/App.tsx
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 
-// Seiten / Komponenten
-import Home from "./components/Home";
-
-// Beispiele
+import Home from "./pages/Home";
 import BleachingLandingpageMuenchen from "./pages/beispiele/bleachinglandingpage-muenchen";
 
-export default function App() {
+function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
+    <BrowserRouter>
+      {/* Scroll-Reset bei jedem Seitenwechsel */}
+      <ScrollToTop />
 
-      {/* Beispiele */}
-      <Route
-        path="/beispiele/bleachinglandingpage-muenchen"
-        element={<BleachingLandingpageMuenchen />}
-      />
+      <Routes>
+        <Route path="/" element={<Home />} />
 
-      {/* Fallback */}
-      <Route
-        path="*"
-        element={
-          <main className="mx-auto max-w-4xl px-6 py-24">
-            <h1 className="text-2xl font-semibold">Seite nicht gefunden</h1>
-            <p className="mt-2 text-slate-600">
-              Bitte prüfe die URL oder gehe zurück zur Startseite.
-            </p>
-          </main>
-        }
-      />
-    </Routes>
+        <Route
+          path="/beispiele/bleachinglandingpage-muenchen"
+          element={<BleachingLandingpageMuenchen />}
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
+
+export default App;
