@@ -1,18 +1,17 @@
+// src/App.tsx
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 
-import Home from "./pages/Home";
+import Home from "./components/Home";
 import BleachingLandingpageMuenchen from "./pages/beispiele/bleachinglandingpage-muenchen";
 
-function App() {
+export default function App() {
   return (
     <BrowserRouter>
-      {/* Scroll-Reset bei jedem Seitenwechsel */}
       <ScrollToTop />
 
       <Routes>
         <Route path="/" element={<Home />} />
-
         <Route
           path="/beispiele/bleachinglandingpage-muenchen"
           element={<BleachingLandingpageMuenchen />}
@@ -21,5 +20,3 @@ function App() {
     </BrowserRouter>
   );
 }
-
-export default App;
