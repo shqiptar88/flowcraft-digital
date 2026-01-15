@@ -1,4 +1,4 @@
-// src/components/Home.tsx
+// src/pages/Home.tsx
 import Header from "./Header";
 import Hero from "./Hero";
 import USP from "./USP";
