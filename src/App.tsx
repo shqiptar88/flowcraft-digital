@@ -1,7 +1,8 @@
+// src/App.tsx
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 
-import Index from "./pages/Index";
+import Home from "./pages/Home";
 import BleachingLandingpageMuenchen from "./pages/beispiele/bleachinglandingpage-muenchen";
 
 export default function App() {
@@ -9,7 +10,7 @@ export default function App() {
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Index />} />
+        <Route path="/" element={<Home />} />
         <Route
           path="/beispiele/bleachinglandingpage-muenchen"
           element={<BleachingLandingpageMuenchen />}
