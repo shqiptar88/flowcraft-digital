@@ -1,35 +1,16 @@
+// src/pages/beispiele/praxis-hamburg.tsx
 import { useEffect } from "react";
-
-import HeaderHamburg from "@/components/Demos/PraxisHamburg/HeaderHamburg";
-import HeroHamburg from "@/components/Demos/PraxisHamburg/HeroHamburg";
-import USPCardsHamburg from "@/components/Demos/PraxisHamburg/USPCardsHamburg";
-import ServicesHamburg from "@/components/Demos/PraxisHamburg/ServicesHamburg";
-import ProcessHamburg from "@/components/Demos/PraxisHamburg/ProcessHamburg";
-import TeamHamburg from "@/components/Demos/PraxisHamburg/TeamHamburg";
-import ReviewsHamburg from "@/components/Demos/PraxisHamburg/ReviewsHamburg";
-import FAQHamburg from "@/components/Demos/PraxisHamburg/FAQHamburg";
-import ContactHamburg from "@/components/Demos/PraxisHamburg/ContactHamburg";
-import FooterHamburg from "@/components/Demos/PraxisHamburg/FooterHamburg";
+import IndexHamburg from "@/components/Demos/PraxisHamburg/IndexHamburg";
 
 export default function PraxisHamburgPage() {
+  // ✅ Fix: Seite startet IMMER oben
   useEffect(() => {
-    document.title = "Zahnarztpraxis Hamburg-Eppendorf | Demo";
+    window.scrollTo(0, 0);
   }, []);
 
   return (
-    <>
-      <HeaderHamburg />
-      <main>
-        <HeroHamburg />
-        <USPCardsHamburg />
-        <ServicesHamburg />
-        <ProcessHamburg />
-        <TeamHamburg />
-        <ReviewsHamburg />
-        <FAQHamburg />
-        <ContactHamburg />
-      </main>
-      <FooterHamburg />
-    </>
+    <main className="min-h-screen bg-white">
+      <IndexHamburg />
+    </main>
   );
 }
