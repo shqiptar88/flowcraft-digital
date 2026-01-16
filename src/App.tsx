@@ -1,21 +1,27 @@
 // src/App.tsx
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
 
-import Home from "./pages/Home";
-import BleachingLandingpageMuenchen from "./pages/beispiele/bleachinglandingpage-muenchen";
+import { Routes, Route } from "react-router-dom";
+
+import Home from "@/pages/Home";
+import BleachingLandingpageMuenchen from "@/pages/beispiele/bleachinglandingpage-muenchen";
+import PraxisHamburgPage from "@/pages/beispiele/praxis-hamburg";
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route
-          path="/beispiele/bleachinglandingpage-muenchen"
-          element={<BleachingLandingpageMuenchen />}
-        />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+
+      {/* bestehend */}
+      <Route
+        path="/beispiele/bleachinglandingpage-muenchen"
+        element={<BleachingLandingpageMuenchen />}
+      />
+
+      {/* NEU – Praxis Hamburg */}
+      <Route
+        path="/beispiele/praxis-hamburg"
+        element={<PraxisHamburgPage />}
+      />
+    </Routes>
   );
 }
