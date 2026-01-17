@@ -1,6 +1,9 @@
 // src/pages/beispiele/praxis-hamburg.tsx
-import IndexHamburg from "@/components/Demos/PraxisHamburg/IndexHamburg";
-
 export default function PraxisHamburgPage() {
-  return <IndexHamburg />;
+  return (
+    <div style={{ padding: 40, background: "yellow", color: "black" }}>
+      <h1>PRAXIS HAMBURG ROUTE LÄUFT</h1>
+      <p>Wenn du das siehst, ist Route + Render OK.</p>
+    </div>
+  );
 }
