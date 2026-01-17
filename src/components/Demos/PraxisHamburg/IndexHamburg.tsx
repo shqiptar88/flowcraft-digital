@@ -1,4 +1,6 @@
 // src/components/Demos/PraxisHamburg/IndexHamburg.tsx
+import { useEffect } from "react";
+
 import HeaderHamburg from "@/components/Demos/PraxisHamburg/HeaderHamburg";
 import HeroHamburg from "@/components/Demos/PraxisHamburg/HeroHamburg";
 import USPCardsHamburg from "@/components/Demos/PraxisHamburg/USPCardsHamburg";
@@ -11,6 +13,10 @@ import ContactHamburg from "@/components/Demos/PraxisHamburg/ContactHamburg";
 import FooterHamburg from "@/components/Demos/PraxisHamburg/FooterHamburg";
 
 export default function IndexHamburg() {
+  useEffect(() => {
+    document.title = "Zahnarztpraxis Hamburg-Eppendorf | Demo";
+  }, []);
+
   return (
     <>
       <HeaderHamburg />
