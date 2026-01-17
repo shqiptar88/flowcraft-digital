@@ -1,28 +1,19 @@
 // src/components/Demos/PraxisHamburg/IndexHamburg.tsx
-
-import { useEffect } from "react";
-
-import HeaderHamburg from "./HeaderHamburg";
-import HeroHamburg from "./HeroHamburg";
-import USPCardsHamburg from "./USPCardsHamburg";
-import ServicesHamburg from "./ServicesHamburg";
-import ProcessHamburg from "./ProcessHamburg";
-import TeamHamburg from "./TeamHamburg";
-import ReviewsHamburg from "./ReviewsHamburg";
-import FAQHamburg from "./FAQHamburg";
-import ContactHamburg from "./ContactHamburg";
-import FooterHamburg from "./FooterHamburg";
+import HeaderHamburg from "@/components/Demos/PraxisHamburg/HeaderHamburg";
+import HeroHamburg from "@/components/Demos/PraxisHamburg/HeroHamburg";
+import USPCardsHamburg from "@/components/Demos/PraxisHamburg/USPCardsHamburg";
+import ServicesHamburg from "@/components/Demos/PraxisHamburg/ServicesHamburg";
+import ProcessHamburg from "@/components/Demos/PraxisHamburg/ProcessHamburg";
+import TeamHamburg from "@/components/Demos/PraxisHamburg/TeamHamburg";
+import ReviewsHamburg from "@/components/Demos/PraxisHamburg/ReviewsHamburg";
+import FAQHamburg from "@/components/Demos/PraxisHamburg/FAQHamburg";
+import ContactHamburg from "@/components/Demos/PraxisHamburg/ContactHamburg";
+import FooterHamburg from "@/components/Demos/PraxisHamburg/FooterHamburg";
 
 export default function IndexHamburg() {
-  useEffect(() => {
-    document.title =
-      "Zahnarztpraxis Hamburg-Eppendorf | Demo – FlowCraft Digital";
-  }, []);
-
   return (
     <>
       <HeaderHamburg />
-
       <main>
         <HeroHamburg />
         <USPCardsHamburg />
@@ -33,7 +24,6 @@ export default function IndexHamburg() {
         <FAQHamburg />
         <ContactHamburg />
       </main>
-
       <FooterHamburg />
     </>
   );
