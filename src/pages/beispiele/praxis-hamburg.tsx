@@ -6,6 +6,7 @@ import ProcessHamburg from "@/components/Demos/PraxisHamburg/ProcessHamburg";
 import TeamHamburg from "@/components/Demos/PraxisHamburg/TeamHamburg";
 import ReviewsHamburg from "@/components/Demos/PraxisHamburg/ReviewsHamburg";
 import FAQHamburg from "@/components/Demos/PraxisHamburg/FAQHamburg";
+import ContactHamburg from "@/components/Demos/PraxisHamburg/ContactHamburg";
 
 
 export default function PraxisHamburgPage() {
@@ -19,6 +20,7 @@ export default function PraxisHamburgPage() {
       <TeamHamburg />
       <ReviewsHamburg />
       <FAQHamburg />
+      <ContactHamburg />
     </>
   );
 }
