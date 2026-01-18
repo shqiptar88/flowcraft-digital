@@ -1,7 +1,8 @@
 import HeaderHamburg from "@/components/Demos/PraxisHamburg/HeaderHamburg";
 import HeroHamburg from "@/components/Demos/PraxisHamburg/HeroHamburg";
-
+import USPCardsHamburg from "@/components/Demos/PraxisHamburg/USPCardsHamburg";
 import ServicesHamburg from "@/components/Demos/PraxisHamburg/ServicesHamburg";
+import ProcessHamburg from "@/components/Demos/PraxisHamburg/ProcessHamburg";
 
 
 export default function PraxisHamburgPage() {
@@ -9,8 +10,9 @@ export default function PraxisHamburgPage() {
     <>
       <HeaderHamburg />
       <HeroHamburg />
-  
+      <USPCardsHamburg />
       <ServicesHamburg />
+      <ProcessHamburg />
     </>
   );
 }
