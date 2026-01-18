@@ -7,12 +7,15 @@ import TeamHamburg from "@/components/Demos/PraxisHamburg/TeamHamburg";
 import ReviewsHamburg from "@/components/Demos/PraxisHamburg/ReviewsHamburg";
 import FAQHamburg from "@/components/Demos/PraxisHamburg/FAQHamburg";
 import ContactHamburg from "@/components/Demos/PraxisHamburg/ContactHamburg";
+import FooterHamburg from "@/components/Demos/PraxisHamburg/FooterHamburg";
 
 
 export default function PraxisHamburgPage() {
   return (
     <>
       <HeaderHamburg />
+     
+     <main>
       <HeroHamburg />
       <USPCardsHamburg />
       <ServicesHamburg />
@@ -21,6 +24,9 @@ export default function PraxisHamburgPage() {
       <ReviewsHamburg />
       <FAQHamburg />
       <ContactHamburg />
+      </main>
+
+      <FooterHamburg />
     </>
   );
 }
