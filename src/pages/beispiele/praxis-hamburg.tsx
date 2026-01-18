@@ -14,8 +14,12 @@ export default function PraxisHamburgPage() {
   return (
     <>
       <HeaderHamburg />
-     
-     <main>
+
+      <div style={{ padding: 24, background: "yellow", color: "black" }}>
+        <h2>DEBUG: Content unter Header</h2>
+        <p>Wenn du das siehst, rendert React unter dem Header, aber CSS/Sections sind das Problem.</p>
+      </div>
+
       <HeroHamburg />
       <USPCardsHamburg />
       <ServicesHamburg />
@@ -24,8 +28,6 @@ export default function PraxisHamburgPage() {
       <ReviewsHamburg />
       <FAQHamburg />
       <ContactHamburg />
-      </main>
-
       <FooterHamburg />
     </>
   );
