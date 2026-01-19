@@ -1,5 +1,5 @@
 // src/App.tsx
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import Home from "@/pages/Home";
 import BleachingLandingpageMuenchen from "@/pages/beispiele/bleachinglandingpage-muenchen";
@@ -16,20 +16,22 @@ function RouteTest123() {
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
+    <Routes>
+      <Route path="/" element={<Home />} />
 
-        <Route
-          path="/beispiele/bleachinglandingpage-muenchen"
-          element={<BleachingLandingpageMuenchen />}
-        />
-        <Route path="/beispiele/praxis-hamburg" element={<PraxisHamburgPage />} />
+      <Route
+        path="/beispiele/bleachinglandingpage-muenchen"
+        element={<BleachingLandingpageMuenchen />}
+      />
 
-        <Route path="/route-test-123" element={<RouteTest123 />} />
+      <Route
+        path="/beispiele/praxis-hamburg"
+        element={<PraxisHamburgPage />}
+      />
 
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
-    </BrowserRouter>
+      <Route path="/route-test-123" element={<RouteTest123 />} />
+
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   );
 }

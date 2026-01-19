@@ -9,25 +9,27 @@ import FAQHamburg from "@/components/Demos/PraxisHamburg/FAQHamburg";
 import ContactHamburg from "@/components/Demos/PraxisHamburg/ContactHamburg";
 import FooterHamburg from "@/components/Demos/PraxisHamburg/FooterHamburg";
 
-
 export default function PraxisHamburgPage() {
   return (
     <>
       <HeaderHamburg />
 
-      <div style={{ padding: 24, background: "yellow", color: "black" }}>
-        <h2>DEBUG: Content unter Header</h2>
-        <p>Wenn du das siehst, rendert React unter dem Header, aber CSS/Sections sind das Problem.</p>
+      {/* Debug-Bar: MUSS sichtbar sein, sonst stimmt Routing/Build nicht */}
+      <div style={{ padding: 16, background: "yellow", color: "black" }}>
+        DEBUG: Praxis Hamburg Page rendert unter dem Header.
       </div>
 
-      <HeroHamburg />
-      <USPCardsHamburg />
-      <ServicesHamburg />
-      <ProcessHamburg />
-      <TeamHamburg />
-      <ReviewsHamburg />
-      <FAQHamburg />
-      <ContactHamburg />
+      <main>
+        <HeroHamburg />
+        <USPCardsHamburg />
+        <ServicesHamburg />
+        <ProcessHamburg />
+        <TeamHamburg />
+        <ReviewsHamburg />
+        <FAQHamburg />
+        <ContactHamburg />
+      </main>
+
       <FooterHamburg />
     </>
   );
